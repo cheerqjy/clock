@@ -1,0 +1,63 @@
+/**app.wxss**/
+
+.flex        {display: flex!important;}
+.flex-inline {display: inline-flex!important;}
+
+.flex-row       {flex-direction: row;}
+.flex-column    {flex-direction: column;}
+
+.flex-wrap   {flex-wrap: wrap;}
+.flex-nowrap {flex-wrap: nowrap;}
+
+
+.justify-start  {justify-content: flex-start;}
+.justify-end    {justify-content: flex-end;}
+.justify-center {justify-content: center;}
+.space-around {justify-content: space-around;}
+.space-between  {justify-content: space-between;}
+
+.stretch      {align-items: stretch;}
+.align-start  {align-items: flex-start;}
+.align-end    {align-items: flex-end;}
+.align-middle {align-items: center;}
+
+/* 同时获得 .justify-center 和 .align-middle 样式 */ 
+.flex-middle {
+  justify-content: center;
+  align-items: center;
+}
+
+/*  align-content 属性只适用于多行的flex容器，并且当侧轴上有多余空间使flex容器内的flex线对齐。 */ 
+.content-start         {align-content: flex-start;}
+.content-end           {align-content: flex-end;}
+.content-center        {align-content: center;}
+.content-space-between {align-content: space-between;}
+.content-space-around  {align-content: space-around;}
+.content-stretch       {align-content: stretch;}
+
+
+page{
+  background: #f1f1f1;
+  font-size: 12px;
+}
+view{
+  box-sizing: border-box;
+}
+.container{
+  width: 94vw;
+  min-height: 100rpx;
+  margin: 20rpx auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.p20{
+  padding:20rpx;
+}
+.p-v-40{
+  padding-top:40rpx;
+  padding-bottom:40rpx;
+}
+.gray{
+  color: #666;
+}

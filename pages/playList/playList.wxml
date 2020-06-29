@@ -1,0 +1,10 @@
+<!--pages/playList/playList.wxml-->
+<button wx:if="{{choiceClassNo==0}}">请先选择班级</button>
+<view wx:for="{{clock_list}}" class="container flex clock_list" bindtap="gotoPlay">
+  <image src="/assets/create_clock.png"></image>
+  <view class="flex flex-column space-around">
+    <view class="title">{{item.title}}</view>
+    <view class="time">{{item.startDate}}至{{item.endDate}}</view>
+    <view><text class="ing">进行中</text><text class="joinCount">{{joinCount}}人参与</text></view>
+  </view>
+</view>

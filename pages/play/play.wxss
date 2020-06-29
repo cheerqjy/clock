@@ -1,0 +1,62 @@
+/* pages/play/play.wxss */
+.clockInfoWrap{
+  position: relative;
+}
+.clockInfo{
+  width: 100%;
+  height: 350rpx;
+  padding: 20px 20rpx 150rpx;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  background-image:linear-gradient(180deg,#fff 60%,rgba(255,255,255,0));
+}
+.ing{
+  margin-right: 10rpx;
+  padding: 5rpx 10rpx;
+  display: inline-block;
+  color: white;
+  border-radius: 5rpx;
+  background: rgb(54, 196, 35);
+}
+.joinCount{
+  margin-right: 10rpx;
+  padding: 5rpx 10rpx;
+  display: inline-block;
+  color: white;
+  border-radius: 5rpx;
+  background: rgb(95, 217, 248);
+}
+
+.playContainer{
+  width: 94vw;
+  min-height: 100rpx;
+  margin: 20rpx auto;
+}
+.playInput input{
+  border-bottom: 1px solid #dedede;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+.playList{
+  padding: 20rpx;
+}
+.playList:not(:last-child){
+  border-bottom: 1px solid #dedede;
+}
+.playList image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.btnBg{
+  height: 30rpx;
+  line-height: 20rpx;
+  margin-right: 10rpx;
+  padding: 0rpx 10rpx;
+  display: inline-block;
+  color: #333;
+  border-radius: 5rpx;
+  background: rgb(226, 226, 226);
+}

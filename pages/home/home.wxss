@@ -1,0 +1,55 @@
+/* pages/home/home.wxss */
+
+.userBox{
+}
+.userBox image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+
+.me_clock{
+
+}
+.title{
+  border-bottom: 1px solid #e5e5e5;
+}
+.me_clock_content>view{
+  width: calc(100vw / 3);
+}
+.me_clock_content>view:not(:last-child){
+  border-right: 1px solid #e5e5e5;
+}
+.me_clock image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.more>view>view{
+  width: 50%;
+}
+.more_content>view:nth-child(2n){
+  border-left: 1px solid #e5e5e5;
+}
+.more_content>view:nth-child(1),.more_content>view:nth-child(2){
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.more image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.footer{
+  text-align: center;
+  margin-top: 20rpx;
+}
+.footer> view{
+  margin-bottom: 20rpx;
+}
+.footer> view > text{
+  margin: 0 20rpx;
+}

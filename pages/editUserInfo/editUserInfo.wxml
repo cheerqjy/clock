@@ -1,0 +1,9 @@
+<!--pages/editUserInfo/editUserInfo.wxml-->
+<view class="editContainer flex flex-column space-between">
+	<text>选择班级</text>
+	<picker bindchange="changeClassNo" value="{{classInfo.index}}" range="{{classInfo.classNo}}">
+		<text>{{classInfo.classNo[classInfo.index]}}</text>
+	</picker>
+	<button bindtap="toToHome" type="primary">确定</button>
+	<!-- 打卡要创建一个内部分享机制 不然谁都可以打卡 -->
+</view>

@@ -1,0 +1,81 @@
+ <view class="container userBox flex space-between p20" wx:if="{{!openid}}">
+ 	<button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+ </view>
+ <view class="container userBox flex space-between p20" wx:else>
+    <view class="flex align-middle">
+        <image src="/assets/小热01.jpg" />
+        <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class="flex align-middle" bindtap="setUserInfo">
+        <text>编辑资料</text>
+        <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{classNo}}">
+            <text>{{classNo[index]}}</text>
+        </picker> -->
+    </view>
+</view>
+
+<view class="container me_clock">
+    <view class="title p20">我的打卡</view>
+    <view class="me_clock_content flex space-between">
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoJoin">
+            <image class="" src="/assets/clock.png" />
+            <text class="">参与的打卡</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoList">
+            <image class="" src="/assets/clock_list.png" />
+            <text class="">创建的打卡</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoCreate">
+            <image class="" src="/assets/create_clock.png" />
+            <text class="">创建打卡</text>
+        </view>
+    </view>
+</view>
+
+<view class="container me_clock">
+    <view class="title p20">我的出勤</view>
+    <view class="me_clock_content flex space-between">
+        <view class="flex flex-column align-middle p20 p-v-40">
+            <image class="" src="/assets/late.png" />
+            <text class="">迟到记录</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40">
+            <image class="" src="/assets/breda.png" />
+            <text class="">冲动的惩罚</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40">
+            <image class="" src="/assets/remind.png" />
+            <text class="">班级记录</text>
+        </view>
+    </view>
+</view>
+
+<view class="container more">
+    <view class="title p20">更多功能</view>
+    <view class="more_content flex space-between flex-wrap ">
+        <view class="flex flex-column align-middle p20 p-v-40">
+            <image class="" src="/assets/remind.png" />
+            <text class="">管理打卡</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40">
+            <image class="" src="/assets/late.png" />
+            <text class="">提醒</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40" bindtap="gotoReward">
+            <image class="" src="/assets/reward.png" />
+            <text class="">打赏作者</text>
+        </view>
+        <view class="flex flex-column align-middle p20 p-v-40">
+            <image class="" src="/assets/concat.png" show-menu-by-longpress/>
+            <text class="">联系我们</text>
+        </view>
+    </view>
+</view>
+
+<view class="footer">
+    <view>
+        <text >v0.0.1</text>
+        <text >使用说明</text> 
+    </view>
+    <view>由知了堂七歌开发</view>
+</view>

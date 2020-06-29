@@ -1,0 +1,5 @@
+/* pages/editUserInfo/editUserInfo.wxss */
+.editContainer{
+  height: 250rpx;
+  padding: 20rpx;
+}

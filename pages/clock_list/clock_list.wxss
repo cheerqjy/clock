@@ -1,0 +1,29 @@
+/* pages/clock_list/clock_list.wxss */
+.clock_list{
+
+}
+.clock_list > image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  padding: 20rpx;
+}
+.clock_list > view{
+  padding: 10rpx;
+}
+.ing{
+  margin-right: 10rpx;
+  padding: 5rpx 10rpx;
+  display: inline-block;
+  color: white;
+  border-radius: 5rpx;
+  background: rgb(54, 196, 35);
+}
+.joinCount{
+  margin-right: 10rpx;
+  padding: 5rpx 10rpx;
+  display: inline-block;
+  color: white;
+  border-radius: 5rpx;
+  background: rgb(95, 217, 248);
+}

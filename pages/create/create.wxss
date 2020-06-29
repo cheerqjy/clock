@@ -1,0 +1,44 @@
+/* pages/create/create.wxss */
+.create_content{
+  padding: 20rpx 20rpx 0;
+  min-height: 100rpx;
+  background: #fff;
+}
+.inp_title{
+  height: 60rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+.create_content picker view{
+  padding: 20rpx 0;
+}
+.create_content picker:not(:last-child) view{
+  padding: 20rpx 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.map view{
+  padding: 20rpx 0;
+}
+.map view:not(:last-child){
+  padding: 20rpx 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.map image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
+.map input{
+  margin-left: 30rpx;
+}
+.info_list{
+}
+.info_list text{
+  width: 30%;
+  padding: 20rpx 0;
+  text-align: center;
+  border-radius: 6rpx;
+  border: 1px solid #dedede;
+}
+.info_list .current{
+  border: 1px solid #f00;
+}

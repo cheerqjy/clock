@@ -1,0 +1,90 @@
+<!--pages/create/create.wxml-->
+<view class="create_wrap">
+    <view class="title p20">创建每日打卡</view>
+    <view class="create_content">
+        <input class="inp_title" type="text" maxlength='15' placeholder="打卡标题(最多15个字符)" bindblur="setTitle"/>
+        <picker mode="date" value="{{startDate}}" start="2020-06-01" end="2022-09-01" bindchange="changeDate" data-type="startDate">
+            <view class="flex space-between">
+                <text>开始日期:</text>
+                <text>{{startDate}}</text>
+            </view>
+        </picker>
+        <picker mode="date" value="{{endDate}}" start="2020-06-01" end="2022-09-01" bindchange="changeDate" data-type="endDate">
+            <view class="flex space-between">
+                <text>结束日期:</text>
+                <text>{{endDate}}</text>
+            </view>
+        </picker>
+    </view>
+</view>
+
+<view class="create_wrap">
+    <view class="title p20">时间设置</view>
+    <view class="create_content">
+        <picker mode="time" value="{{startTime}}" start="09:01" end="21:01" bindchange="changeDate" data-type="startTime">
+            <view class="flex space-between">
+                <text>开始时间:</text>
+                <text>{{startTime}}</text>
+            </view>
+        </picker>
+        <picker mode="time" value="{{endTime}}" start="09:01" end="21:01" bindchange="changeDate" data-type="endTime">
+            <view class="flex space-between">
+                <text>结束时间:</text>
+                <text>{{endTime}}</text>
+            </view>
+        </picker>
+    </view>
+</view>
+
+<view class="create_wrap">
+    <view class="title p20">地点设置</view>
+    <view class="create_content map">
+        <view class="flex space-between align-middle">
+            <text class="">指定打卡地点</text>
+            <switch class="" disabled="{{true}}" checked="{{false}}"/>
+        </view>
+        <view class="flex align-middle" bindtap="setMap">
+            <text class="">定位</text>
+            <image src="/assets/icon_map.png"/>
+            <text>{{targetMap.name}}</text>
+        </view>
+        <view class="flex align-middle">
+            <text class="">班级</text>
+            <input type="number" value="{{classNo}}" bindblur="setClassNo" placeholder="请输入数字即可"></input>
+        </view>
+        <view class="flex align-middle">
+            <text class="">打卡范围</text>
+            <input type="text" value="500米" placeholder="详细地址 (选填)"></input>
+        </view>
+    </view>
+</view>
+
+<view class="create_wrap">
+    <view class="title p20">打卡者填写项</view>
+    <view class="create_content map">
+        <view class="flex space-between info_list">
+            <text 
+                wx:for="{{writeChoice}}"
+                wx:key="type"
+                data-id="{{index}}" 
+                class="{{item.state?'current':''}}"
+                bindtap="changeCurrent"
+            >{{item.notes}}</text>
+        </view>
+        <view class="flex space-between align-middle">
+            <text>打卡填写设置</text>
+            <picker bindchange="changeIsEveryWrite" value="{{isEveryWrite.index}}" range="{{isEveryWrite.list}}">
+                <view class="picker">{{isEveryWrite.list[isEveryWrite.index]}}</view>
+            </picker>
+        </view>
+        <view class="flex space-between align-middle">
+            <text class="">允许删除修改打卡记录</text>
+            <switch class="" checked="{{true}}"/>
+        </view>
+        <view style="padding:40rpx 0;">
+            <button type="primary" bindtap="createClockEvent" wx:if='{{openid}}'>提交</button>
+            <button type="primary" bindtap="goToHome" wx:else>回首页登录</button>
+        </view>
+    </view>
+
+</view>

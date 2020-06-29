@@ -1,0 +1,44 @@
+<!--pages/play/play.wxml-->
+<view class="clockInfoWrap container flex flex-column space-around" bindtap="viewMap">
+	<view class="clockInfo flex flex-column space-around">
+    <text>{{clock_info.title}}</text>
+	<view class="time">{{clock_info.startDate}}至{{clock_info.endDate}}</view>
+	<view><text class="ing">进行中</text><text class="joinCount">{{joinCount}}人参与</text></view>
+  <view>{{clock_info.targetMap.name}}</view>
+  </view>
+  <map id="map" longitude="{{clock_info.targetMap.longitude}}" latitude="{{clock_info.targetMap.latitude}}" markers="{{markers}}" scale="14" enable-3D show-location='true' style="width: 100%; height: 200px; margin-top:100rpx"></map>
+</view>
+
+<view class="container p20">
+  <view>打卡规则</view>
+  <view>1.打卡必须距离地址500米之内</view>
+  <view>2.仅发起人可查看打卡记录</view>
+  <view>3.每次打卡许提供['姓名']信息</view>
+</view>
+
+<view class="playContainer playInput"> 
+  <input placeholder="请输入姓名" wx:if="{{clock_info.isEveryWrite.index==0}}" value="{{userName}}" bindblur="setUserName"></input> 
+  <button type="primary" bindtap="play_clock">点击打卡</button>
+</view>
+
+<view class="container" wx:if="{{clock_logs.logsInfo.length>0}}">
+  <view class="title"></view>
+  <view class="playList flex" wx:for="{{clock_logs.logsInfo}}" wx:key="index">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="flex flex-column space-between" style="flex:1">
+      <view class="nickName flex space-between">
+        <text>{{userInfo.nickName}}</text>
+        <text class="joinCount"> 已打卡{{clock_logs.logsInfo.length}}天</text>
+      </view>
+      <view class="userName">姓名:{{item.userName}}</view>
+      <view class="time flex space-between">
+        <text class="gray">{{item.date}} {{item.time}}</text>
+        <text class="btnBg">...</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="container flex flex-middle" wx:else>
+  暂无信息
+</view>
