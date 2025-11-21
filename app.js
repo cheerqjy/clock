@@ -2,7 +2,7 @@
 App({
   onLaunch: function () {
     wx.cloud.init({
-      env:"cheerqjy-zzet7",//拿云开发的ID
+      env:"cloudbase-9gtycad1a7cd498a",//拿云开发的ID
       traceUser:true,//将用户访问记录到用户管理中
     })
     
